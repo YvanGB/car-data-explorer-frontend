@@ -1,7 +1,7 @@
 // frontend/src/services/api.js
 import axios from 'axios'
-const apiUrl = 'http://127.0.0.1:5000/api';
-// const apiUrl = 'https://test-cardataexplorer-back.onrender.com/api';
+// const apiUrl = 'http://127.0.0.1:5000/api';
+const apiUrl = 'https://cardataexplorerapi.onrender.com/api';
 
 const api = {
     addCar: async (data) =>{
