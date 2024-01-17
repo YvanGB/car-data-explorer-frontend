@@ -1,9 +1,17 @@
 // frontend/src/services/api.js
 import axios from 'axios'
-// const apiUrl = 'http://127.0.0.1:5000/api';
-const apiUrl = 'https://test-cardataexplorer-back.onrender.com/api';
+const apiUrl = 'http://127.0.0.1:5000/api';
+// const apiUrl = 'https://test-cardataexplorer-back.onrender.com/api';
 
 const api = {
+    addCar: async (data) =>{
+        try {
+            const response = await axios.post(`${apiUrl}/addCar`, data);
+            return response.data;
+        } catch (error) {
+            console.log('Erreur lors de l\'ajout : ', error);
+        }
+    },
     fetchCars: async () => {
         try {
             const response = await axios.get(`${apiUrl}/cars`);

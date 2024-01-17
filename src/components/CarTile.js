@@ -1,19 +1,25 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Button, CardHeader } from 'react-bootstrap'
 
 export const CarTile = ({car}) => {
   return (
-        <Card style={{ width: '18rem', margin:10 }}>
-        <Card.Body>
-            <Card.Title style={{fontSize:22}}>Marque: {car.brand}</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Modèle: {car.model}</Card.Subtitle>
-            <Card.Text>Année: {car.year}</Card.Text>
-            <Card.Text>Couleur: {car.color}</Card.Text>
-            <Card.Text>Price: {car.price}</Card.Text>
-            <Card.Text>Etat: {car.state}</Card.Text>
-            <Card.Text>Pays: {car.country}</Card.Text>
-            <Card.Text>Mileage: {car.mileage} Km</Card.Text>      
+        <Card className='box' style={{ width: '18rem', margin:10, backgroundColor:'white', borderWidth:2  }}>
+        <CardHeader style={{backgroundColor:'white'}}>
+          <Card.Title style={{fontSize:22, color:'#047fee'}}>Marque: {car.brand}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted" style={{fontSize:18}}>Modèle: {car.model}</Card.Subtitle>
+        </CardHeader>
+        <Card.Body  style={{fontSize:17}}>
+          <Card.Text><span style={{color:'#047fee'}}>Année :</span> {car.year}</Card.Text>
+          <Card.Text><span style={{color:'#047fee'}}>Couleur :</span> {car.color}</Card.Text>
+          <Card.Text><span style={{color:'#047fee'}}>Price : </span> {car.price}</Card.Text>
+          <Card.Text><span style={{color:'#047fee'}}>Etat : </span> {car.state}</Card.Text>
+          <Card.Text><span style={{color:'#047fee'}}>Pays : </span> {car.country}</Card.Text>
+          <Card.Text><span style={{color:'#047fee'}}>Mileage : </span> {car.mileage} Km</Card.Text>      
         </Card.Body>
+        <Card.Footer style={{display:'flex', justifyContent:'space-evenly', alignItems:'center', backgroundColor:'white'}}>
+          <Button variant='light' style={{backgroundColor:'#5ae684', color:'white', fontWeight:'bold',}} >Modifier</Button>
+          <Button variant='light' style={{backgroundColor:'#f25050',color:'white', fontWeight:'bold'}}>Supprimer</Button>
+        </Card.Footer>
         </Card>
   )
 }

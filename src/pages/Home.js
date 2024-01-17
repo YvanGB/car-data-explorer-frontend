@@ -239,35 +239,6 @@ const renderLoadingIndicator = () =>{
 }
 
 
-// const renderCarTiles = () => {
-//   const startIndex = (currentPage - 1) * PAGE_SIZE;
-//   const endIndex = startIndex + PAGE_SIZE;
-//   const carsToDisplay = cars.slice(startIndex, endIndex);
-  
-//   return carsToDisplay.map((car) => {
-//     for (let i = 0; i < aggRoute.length; i++) {
-//       if (name !== aggRoute[i]) {
-//         return <CarTile key={car._id} car={car} />;
-//       } else {
-//         switch (name) {
-//           case aggRoute[0]:
-//             console.log(car);
-//             return <AvgPriceByYear key={car._id} car={car} />;
-//           case aggRoute[1]:
-//             return <CarsCountByBrand key={car._id} car={car} />;
-//           case aggRoute[2]:
-//             return <CarsSortedByMileage key={car._id} car={car} />;
-//           default:
-//             return <CarTile key={car._id} car={car} />;
-//         }
-//       }
-//     }
-//     // Si aucune condition n'est satisfaite, retourner CarTile par défaut
-//     return <CarTile key={car._id} car={car} />;
-//   });
-// };
-
-
 const renderCarTiles = () => {
   const startIndex = (currentPage - 1) * PAGE_SIZE;
   const endIndex = startIndex + PAGE_SIZE;

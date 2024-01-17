@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <>
-        <Navbar bg='warning' >
+        <Navbar bg='warning' style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }} >
             <Container>
               <Navbar.Brand style={{
                 color: 'white',
@@ -27,6 +27,7 @@ function Header() {
               </Link>
             </Container>
         </Navbar>
+        <div style={{ height: '80px' }} />
     </>
   )
 }

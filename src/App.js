@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import AddCarPage from './pages/AddCar';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <Route path="/distinct-years" element={<Home name="distinctYears" />} />
         <Route path="/total-prices-by-brand" element={<Home name="totalPricesByBrand" />} />
         <Route path="/average-and-total-price-by-year" element={<Home name="averageAndTotalPriceByYear" />} />
-
+        <Route path="/add-car" element={<AddCarPage />} />
+        
       </Routes>
     </BrowserRouter>
   );
